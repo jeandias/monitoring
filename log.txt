@@ -1,0 +1,10 @@
+2020-04-30 15:12:18 | https://github.com | online: true
+2020-04-30 15:12:18 | https://golang.org | online: true
+2020-04-30 15:12:23 | https://github.com | online: true
+2020-04-30 15:12:23 | https://golang.org | online: true
+2020-04-30 15:12:28 | https://github.com | online: true
+2020-04-30 15:12:29 | https://golang.org | online: true
+2020-04-30 15:12:34 | https://github.com | online: true
+2020-04-30 15:12:34 | https://golang.org | online: true
+2020-04-30 15:12:39 | https://github.com | online: true
+2020-04-30 15:12:39 | https://golang.org | online: true
