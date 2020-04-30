@@ -10,40 +10,31 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/jeandias/monitoring/cmd"
 )
 
-const turns = 5
-const delay = 5
+const turns = 2
+const delay = 2
 
 func main() {
 	for {
-		showMenu()
+		option, err := cmd.GetOption(os.Stdin)
+		throwError(err)
 
-		option := scanOption()
 		switch option {
 		case 1:
 			startMonitoring()
 		case 2:
 			printLog()
 		case 0:
+			fmt.Println("Exit program")
 			os.Exit(0)
 		default:
 			fmt.Println("Option not found")
 			os.Exit(-1)
 		}
 	}
-}
-
-func showMenu() {
-	fmt.Println("1 - Start monitoring")
-	fmt.Println("2 - Show Logs")
-	fmt.Println("0 - Exit Program")
-}
-
-func scanOption() int {
-	var option int
-	fmt.Scan(&option)
-	return option
 }
 
 func readFile() []string {
@@ -106,6 +97,6 @@ func printLog() {
 
 func throwError(err error) {
 	if err != nil {
-		panic(err.Error())
+		fmt.Printf("Something went wrong: %v", err)
 	}
 }
